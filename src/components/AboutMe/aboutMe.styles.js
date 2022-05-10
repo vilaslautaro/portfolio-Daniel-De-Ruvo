@@ -5,31 +5,68 @@ export const SectionAboutMe = styled.section`
   padding-top: 50px;
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 90px;
 `;
 
 export const AboutMeBoxImg = styled.div`
-  background: var(--colorSecondary);
-  width: 300px;
-  height: 300px;
+  background: #59c9a5;
+  position: relative;
+  width: 530px;
+  height: 477px;
+  & > div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 525px;
+    height: 477px;
+    left: 38px;
+    top: 38px;
+    border: 6px solid #56e39f;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  & > img {
+    position: absolute;
+    width: 591px;
+    height: 638px;
+    left: -50px;
+    bottom: -7px;
+  }
 `;
 
 export const AboutMeBoxText = styled.div`
   display: flex;
   flex-flow: column wrap;
   color: var(--colorPrimary);
-  max-width: 500px;
-  height: 300px;
+  max-width: 650px;
+  height: 500px;
   justify-content: space-between;
   & > p {
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
 `;
+
+export const AboutMeTitle = styled.h2`
+  color: var(--colorSecondary);
+  font-weigth: 600;
+  font-size: 5rem;
+  margin: 0;
+`;
+
+
 export const AboutMeBoxLinks = styled.div`
   & > a {
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 20px;
+    font-size: 1.5rem;
     color: #fff;
+    transition: 0.3s ease all;
+    &:hover{
+      transition: 0.3s ease all;
+      filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.5));
+    }
+    & > img {
+      filter: brightness(1.1);
+    }
   }
 `;

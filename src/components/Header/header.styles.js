@@ -7,19 +7,25 @@ export const Main = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  & > img {
+    color: var(--colorPrimary);
+  }
 `;
 
 export const ListLinks = styled.ul`
   display: flex;
   flex-flow: row wrap;
   list-style: none;
-  color: #fff;
   padding: 0;
+  & > li:first-child{
+    color: var(--colorSecondary);
+    border: 2px solid var(--colorSecondary);
+  }
 `;
 
 export const Links = styled.li`
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-right: 20px;
   color: var(--colorPrimary);
   border-radius: 20px;

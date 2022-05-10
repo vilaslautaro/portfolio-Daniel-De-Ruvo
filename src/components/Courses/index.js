@@ -5,6 +5,7 @@ import {
   ContainerCourses,
   CourseAcademy,
   CourseName,
+  CoursesTitle,
   CourseText,
   SectionCourses,
 } from "./courses.styles";
@@ -27,7 +28,7 @@ export const Courses = () => {
       id: 3,
       name: "Frontend Vue.js Carrer",
       text: "HTML, CSS, SASS, SEO, Javascript, Vue.js",
-      academy: "Coderhoue",
+      academy: "Coderhouse",
     },
     {
       id: 4,
@@ -51,7 +52,7 @@ export const Courses = () => {
 
   return (
     <SectionCourses>
-      <TitleSection>Courses</TitleSection>
+      <CoursesTitle>Courses</CoursesTitle>
       <ContainerCourses>
         {courses.map(({ id, name, text, academy }) => {
           return (

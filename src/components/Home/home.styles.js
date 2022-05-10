@@ -7,19 +7,20 @@ export const ContainerHome = styled.div`
 
 export const TextHome = styled.p`
   color: var(--colorSecondary);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin: 0;
 `;
 
 export const TitleHome = styled.h1`
   color: var(--colorSecondary);
-  font-size: 3.2rem;
+  font-size: 5.2rem;
   margin: 20px 0 30px;
 `;
 
 export const DescriptionHome = styled.p`
   color: var(--colorPrimary);
   max-width: 600px;
+  font-size: 1.3rem;
   margin: 0;
 `;
 
@@ -29,10 +30,10 @@ export const ButtonHome = styled.button`
     border: 1px solid var(--colorPrimary);
     color: var(--colorPrimary);
     transition: 0.3s ease all;
-    padding: 5px 15px;
+    padding: 10px 15px 8px;
     cursor: pointer;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     &:hover{
         transition: 0.3s ease all;
         color: var(--colorSecondary);
