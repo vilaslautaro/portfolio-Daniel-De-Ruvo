@@ -15,7 +15,7 @@ export const CoursesTitle = styled.h2`
 export const ContainerCourses = styled.ul`
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     color: var(--colorPrimary);
     gap: 50px;
     row-gap: 100px;
@@ -30,7 +30,7 @@ export const ContainerCourse = styled.li`
 
 export const ContainerCourseName = styled.div`
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-items: center;
     & > div{
         display: inline-block;
@@ -45,7 +45,7 @@ export const ContainerCourseName = styled.div`
 
 export const CourseName = styled.p`
     margin: 0 0 15px;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: 600;
 
     

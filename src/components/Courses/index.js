@@ -1,4 +1,3 @@
-import { TitleSection } from "styles";
 import {
   ContainerCourse,
   ContainerCourseName,

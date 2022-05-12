@@ -26,7 +26,7 @@ export const ListLinks = styled.ul`
 export const Links = styled.li`
   cursor: pointer;
   font-size: 1.5rem;
-  margin-right: 20px;
+  margin-right: 10px;
   color: var(--colorPrimary);
   border-radius: 20px;
   border: 2px solid transparent;

@@ -4,14 +4,17 @@ import {
   ContainerImg,
   ContainerProjects,
   ContainerTexts,
+  Img,
   ProjectButton,
   ProjectDescription,
   ProjectSubtitle,
   ProjectTitle,
   SectionProjects,
 } from "./projects.styles";
+import useWidth from "hooks/useWidth";
 
 export const Projects = ({ refProjects }) => {
+  const { width } = useWidth();
   const projects = [
     {
       id: 1,
@@ -37,30 +40,6 @@ export const Projects = ({ refProjects }) => {
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
       link: "https://www.example.com",
     },
-    {
-      id: 4,
-      img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
-      title: "Lorem ipsum is simply dummy",
-      subtitle: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
-      link: "https://www.example.com",
-    },
-    {
-      id: 5,
-      img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
-      title: "Lorem ipsum is simply dummy",
-      subtitle: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
-      link: "https://www.example.com",
-    },
-    {
-      id: 6,
-      img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
-      title: "Lorem ipsum is simply dummy",
-      subtitle: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
-      link: "https://www.example.com",
-    },
   ];
 
   return (
@@ -70,11 +49,15 @@ export const Projects = ({ refProjects }) => {
         {projects.map(({ id, img, title, subtitle, text, link }) => {
           return (
             <Container key={id}>
-              <ContainerBoxImg >
-                <ContainerImg>
-                  <img src={img} alt={title} />
-                </ContainerImg>
-              </ContainerBoxImg>
+              {width > 1024 ? (
+                <ContainerBoxImg>
+                  <ContainerImg>
+                    <img src={img} alt={title} />
+                  </ContainerImg>
+                </ContainerBoxImg>
+              ) : (
+                <Img src={img} alt={title} />
+              )}
               <ContainerTexts>
                 <ProjectTitle>{title}</ProjectTitle>
                 <ProjectSubtitle>{subtitle}</ProjectSubtitle>

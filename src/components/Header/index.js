@@ -1,13 +1,20 @@
+import useWidth from "hooks/useWidth";
 import { ListLinks, Main, Links } from "./header.styles";
+import { HeaderMobile } from "./HeaderMobile";
 
 export const Header = ({refs}) => {
   const {refAboutMe, refProjects, refContact, refHome} = refs
+  const {width} = useWidth()
+
 
   const scrollToSection = (section) => {
     if(section !== null && section.current !== null){
         section.current.scrollIntoView({ behavior: 'smooth', block: 'start' })   
     }
   }
+
+
+  if(width < 1024) return <HeaderMobile refs={refs}/>
     
   return (
         <Main>

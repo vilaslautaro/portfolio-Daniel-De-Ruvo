@@ -19,6 +19,7 @@ export const ContainerTechnologies = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50px, 200px));
     justify-items: center;
+    justify-content: center;
     gap: 50px;
 `
 
