@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionTechnologies = styled.section`
     margin: 50px 0 250px;
-    padding-top: 50px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;

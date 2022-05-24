@@ -23,7 +23,7 @@ export const Header = ({refs}) => {
             aria-label="Logo Daniel" 
             src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653404223/portfolio%20daniel/LOGO_DR_six97a.svg"
             width="120px"
-            height="120px"
+            height="100px"
             onClick={() => scrollToSection(refHome)}
             />
             <nav role="main" aria-label="main">

@@ -33,7 +33,7 @@ export const HeaderMobile = ({ refs }) => {
       <img
         src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653404223/portfolio%20daniel/LOGO_DR_six97a.svg"
         width="65px"
-        height="65px"
+        height="45px"
         aria-label="logo Daniel"
       />
       <img

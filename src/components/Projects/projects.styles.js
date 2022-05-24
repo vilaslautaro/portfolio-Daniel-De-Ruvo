@@ -3,7 +3,7 @@ import { mediaQueries } from "styles";
 
 export const SectionProjects = styled.section`
   margin: 100px 0;
-  padding-top: 50px;
+  padding-top: 150px;
   color: var(--colorPrimary);
   & > h2 {
     font-size: 3.5rem;
