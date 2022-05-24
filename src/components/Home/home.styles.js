@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ContainerHome = styled.div`
-  margin: 30px 0;
-  padding-top: 100px;
+  margin: 0px 0 30px;
+  padding-top: 180px;
 `;
 
 export const TextHome = styled.p`

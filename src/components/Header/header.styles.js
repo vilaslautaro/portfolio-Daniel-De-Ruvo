@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
 export const Main = styled.header`
+  position: fixed;
   display: flex;
-  padding-top: 20px;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  background: var(--background);
+  z-index: 10;
+  width: 90%;
+  border-bottom: 4px solid var(--colorSecondary);
+  max-width: 1400px;
   & > img {
     color: var(--colorPrimary);
+    cursor: pointer;
   }
 `;
 
@@ -25,12 +30,13 @@ export const ListLinks = styled.ul`
 
 export const Links = styled.li`
   cursor: pointer;
-  font-size: 1.5rem;
-  margin-right: 10px;
+  font-size: 1.2rem;
+  margin-right: 15px;
   color: var(--colorPrimary);
+  text-transform: uppercase;
   border-radius: 20px;
   border: 2px solid transparent;
-  padding: 3px 25px;
+  padding: 3px 20px;
   transition: 0.3s ease all;
   &:hover{
     transition: 0.3s ease all;

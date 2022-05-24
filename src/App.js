@@ -8,19 +8,20 @@ import { Courses } from "components/Courses";
 import { Technologies } from "components/Technologies";
 
 const App = () => {
+  const refHome = useRef(null);
   const refAboutMe = useRef(null);
+  const refTechnologies = useRef(null);
   const refProjects = useRef(null);
   const refContact = useRef(null);
-  const refHome = useRef(null);
 
   return (
     <ContainerApp>
       <ContainerSections>
-        <Header refs={{ refAboutMe, refProjects, refContact, refHome }} />
-        <Home refHome={refHome} />
+        <Header refs={{ refAboutMe, refProjects, refContact, refHome, refTechnologies }} />
+        <Home refHome={refHome} refContact={refContact} />
         <AboutMe refAboutMe={refAboutMe} />
         <Courses />
-        <Technologies />
+        <Technologies refTechnologies={refTechnologies} />
         <Projects refProjects={refProjects} />
       </ContainerSections>
     </ContainerApp>

@@ -1,6 +1,13 @@
 import { ButtonHome, ContainerHome, DescriptionHome, TextHome, TitleHome } from "./home.styles";
 
-export const Home = ({ refHome }) => {
+export const Home = ({ refHome, refContact }) => {
+
+  const scrollToSection = (section) => {
+    if(section !== null && section.current !== null){
+        section.current.scrollIntoView({ behavior: 'smooth', block: 'start' })   
+    }
+  }
+
   return (
     <ContainerHome ref={refHome}>
         <TextHome>Hi, my name is</TextHome>
@@ -11,7 +18,7 @@ export const Home = ({ refHome }) => {
           assumenda molestiae veniam incidunt dolor dolore quo nulla a tempora
           beatae asperiores?
         </DescriptionHome>
-        <ButtonHome>GET STARTED</ButtonHome>
+        <ButtonHome onClick={() => scrollToSection(refContact)}>GET STARTED</ButtonHome>
     </ContainerHome>
   );
 };
