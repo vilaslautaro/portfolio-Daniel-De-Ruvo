@@ -41,6 +41,7 @@ export const Links = styled.li`
   cursor: pointer;
   font-size: 2rem;
   margin-right: 20px;
+  text-transform: uppercase;
   margin-bottom: 30px;
   color: var(--colorSecondary);
   border-radius: 20px;

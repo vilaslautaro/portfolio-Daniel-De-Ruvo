@@ -9,7 +9,7 @@ export const CoursesTitle = styled.h2`
     color: var(--colorSecondary);
     font-weigth: 600;
     font-size: 5rem;
-    margin: 0;
+    margin: 0 0 75px;
 `
 
 export const ContainerCourses = styled.ul`

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const SectionTechnologies = styled.section`
-    margin: 50px 0;
-    padding-top: 50px;
+    margin: 50px 0 250px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,6 @@ export const ImgTechnologies = styled.img`
     width: 150px;
     height: 150px;
     &:hover{
-        filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.5));
+        filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.7));
     }
 `

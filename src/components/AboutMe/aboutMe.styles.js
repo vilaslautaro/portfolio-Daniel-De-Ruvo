@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { mediaQueries } from "styles";
 
 export const SectionAboutMe = styled.section`
-  margin: 0;
+  margin: 0 0 300px;
   padding-top: 250px;
   display: grid;
   align-items: start;
@@ -20,6 +20,7 @@ export const AboutMeBoxImg = styled.div`
   background: #59c9a5;
   position: relative;
   width: 330px;
+  margin-left: 30px;
   height: 277px;
   & > div {
     box-sizing: border-box;
@@ -33,10 +34,11 @@ export const AboutMeBoxImg = styled.div`
   }
   & > img {
     position: absolute;
-    width: 391px;
-    height: 438px;
-    left: -50px;
-    bottom: -7px;
+    width: 285px;
+    height: 377px;
+    left: 45px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
+    bottom: 0px;
   }
   ${mediaQueries.desktop} {
     background: #59c9a5;
@@ -55,10 +57,11 @@ export const AboutMeBoxImg = styled.div`
     }
     & > img {
       position: absolute;
-      width: 591px;
+      width: 485px;
       height: 638px;
-      left: -50px;
-      bottom: -7px;
+      left: 45px;
+      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
+      bottom: 0px;
     }
   }
 `;
@@ -72,12 +75,15 @@ export const AboutMeBoxText = styled.div`
   justify-content: space-between;
   & > p {
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   ${mediaQueries.mobile}{
     display:; flex
     flex-flow: column wrap;
     justify-content: space-evenly;
+    & > p {
+      margin: 0;
+    }
   }
 `;
 
@@ -97,10 +103,13 @@ export const AboutMeBoxLinks = styled.div`
     transition: 0.3s ease all;
     &:hover {
       transition: 0.3s ease all;
-      filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.5));
+      filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.8));
     }
     & > img {
       filter: brightness(1.1);
     }
+  }
+  & > a:first-child{
+    display: none;
   }
 `;
