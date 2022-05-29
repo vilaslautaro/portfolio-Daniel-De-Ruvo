@@ -6,6 +6,8 @@ import { Projects } from "components/Projects";
 import { Home } from "components/Home/Index";
 import { Courses } from "components/Courses";
 import { Technologies } from "components/Technologies";
+import { Contact } from "components/Contact/Contact";
+import { Footer } from "components/Footer/Footer";
 
 const App = () => {
   const refHome = useRef(null);
@@ -23,6 +25,8 @@ const App = () => {
         <Courses />
         <Technologies refTechnologies={refTechnologies} />
         <Projects refProjects={refProjects} />
+        <Contact refContact={refContact} />
+        <Footer />
       </ContainerSections>
     </ContainerApp>
   );
