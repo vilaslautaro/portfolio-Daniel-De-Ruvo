@@ -1,6 +1,8 @@
 import { FooterStyle, FooterLinks } from "./Footer.styles";
+import { getDateYear } from "hooks/getDateYear";
 
 export const Footer = () => {
+    const {year} = getDateYear()
     
     const goToTop = () => {
         window.scrollTo({
@@ -45,7 +47,7 @@ export const Footer = () => {
                     />
                 </a>
             </FooterLinks>
-            <h3>2022 All rights reserved</h3>
+            <h3>{year} All rights reserved</h3>
         </FooterStyle>
     )
 }
