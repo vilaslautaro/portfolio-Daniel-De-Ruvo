@@ -14,6 +14,11 @@ export const Main = styled.header`
   & > img {
     color: var(--colorPrimary);
     cursor: pointer;
+    transition: 0.3s ease all;
+    &:hover {
+        transition: 0.3s ease all;
+        filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.8));
+    }
   }
 `;
 
@@ -22,7 +27,7 @@ export const ListLinks = styled.ul`
   flex-flow: row wrap;
   list-style: none;
   padding: 0;
-  & > li:first-child{
+  &.active{
     color: var(--colorSecondary);
     border: 2px solid var(--colorSecondary);
   }

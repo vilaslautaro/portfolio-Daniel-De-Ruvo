@@ -12,35 +12,38 @@ import {
   SectionProjects,
 } from "./projects.styles";
 import useWidth from "hooks/useWidth";
+import { useRefs } from "context/refsContext";
 
-export const Projects = ({ refProjects }) => {
+const projects = [
+  {
+    id: 1,
+    img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
+    title: "Lorem ipsum is simply dummy",
+    subtitle: "Lorem ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
+    link: "https://www.example.com",
+  },
+  {
+    id: 2,
+    img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
+    title: "Lorem ipsum is simply dummy",
+    subtitle: "Lorem ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
+    link: "https://www.example.com",
+  },
+  {
+    id: 3,
+    img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
+    title: "Lorem ipsum is simply dummy",
+    subtitle: "Lorem ipsum",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
+    link: "https://www.example.com",
+  },
+];
+
+export const Projects = () => {
   const { width } = useWidth();
-  const projects = [
-    {
-      id: 1,
-      img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
-      title: "Lorem ipsum is simply dummy",
-      subtitle: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
-      link: "https://www.example.com",
-    },
-    {
-      id: 2,
-      img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
-      title: "Lorem ipsum is simply dummy",
-      subtitle: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
-      link: "https://www.example.com",
-    },
-    {
-      id: 3,
-      img: "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1651164685/sample.jpg",
-      title: "Lorem ipsum is simply dummy",
-      subtitle: "Lorem ipsum",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quis quod officia molestias voluptate provident ex veniam atque eligendi tempora, ullam aperiam corporis? Asperiores doloremque molestiae ipsum sed eligendi inventore.",
-      link: "https://www.example.com",
-    },
-  ];
+  const { refProjects } = useRefs();
 
   return (
     <SectionProjects ref={refProjects}>
@@ -48,7 +51,13 @@ export const Projects = ({ refProjects }) => {
       <ContainerProjects>
         {projects.map(({ id, img, title, subtitle, text, link }) => {
           return (
-            <Container key={id}>
+            <Container
+              key={id}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ type: "spring", bounce: 0.7, duration: 1.5 }}
+              viewport={{ once: true, amount: 0.4 }}
+            >
               {width > 1024 ? (
                 <ContainerBoxImg>
                   <ContainerImg>

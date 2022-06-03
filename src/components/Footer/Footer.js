@@ -1,14 +1,16 @@
 import { FooterStyle, FooterLinks } from "./Footer.styles";
-import { getDateYear } from "hooks/getDateYear";
+import useDateYear from "hooks/useDateYear";
+import { useRefs } from "context/refsContext";
 
 export const Footer = () => {
-    const {year} = getDateYear()
+    const {year} = useDateYear()
     
-    const goToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
+    const {refHome} = useRefs()
+
+    const goToTop = (section) => {
+        if (section !== null && section.current !== null) {
+            section.current.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
     };
 
     return (
@@ -19,10 +21,10 @@ export const Footer = () => {
             src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653404223/portfolio%20daniel/LOGO_DR_six97a.svg"
             width="200px"
             height="180px"
-            onClick={() => goToTop()}
+            onClick={() => goToTop(refHome)}
             />
             <FooterLinks>
-                <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
+                <a className="twitter" href="https://www.twitter.com" target="_blank" rel="noreferrer">
                     <img
                     alt="Twitter"
                     src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653408217/portfolio%20daniel/logot_wbqrk8.svg"

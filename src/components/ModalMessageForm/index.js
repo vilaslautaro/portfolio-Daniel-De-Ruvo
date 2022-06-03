@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import { Modal, ModalText } from "./ModalConfirm.styles";
+import { Modal, ModalText } from "./modalMessageForm.styles";
 
 export default function ModalMessageForm() {
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowModal(false);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [showModal]);
+useEffect(() => {
+  const interval = setInterval(() => {
+    setShowModal(false);
+  }, 4000);
+  return () => clearInterval(interval);
+}, [showModal]);
 
   function ModalStructure({ state, children }) {
     return (

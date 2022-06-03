@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mediaQueries } from "styles";
+import { motion } from "framer-motion";
 
 export const SectionProjects = styled.section`
   margin: 100px 0;
@@ -25,7 +26,7 @@ ${mediaQueries.desktop}{
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     display: flex;
     flex-flow: column wrap;
     margin: 0 0 50px;

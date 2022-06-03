@@ -12,3 +12,7 @@ body {
   font-size: 16px;
   cursor: url(https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653407606/portfolio%20daniel/cursor_2_yavrhq.png), auto;
 }
+
+.twitter{
+  display: none;
+}

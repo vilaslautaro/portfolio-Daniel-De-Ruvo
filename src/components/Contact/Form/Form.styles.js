@@ -22,6 +22,9 @@ export const Form = styled.form`
 export const BoxInput = styled.div`
 display: flex;
 flex-flow: column wrap;
+&.input__antibot{
+  display: none !important;
+}
 & > input {
   padding: 20px 20px;
   margin: 10px 20px;
@@ -29,8 +32,8 @@ flex-flow: column wrap;
   max-width: 250px;
   color: var(--colorPrimary);
   font-size: 1rem;
-  border: none;
-  outline: none;
+  border: 1px solid #3a5856;
+  outline: 1px solid #3a5856;
   background-color: #3a5856;
   ::placeholder {
     color: var(--colorPrimary);
@@ -41,6 +44,7 @@ flex-flow: column wrap;
   &.input__error{
     border: 1px solid red;
     outline: 1px solid red;
+  }
   }
 `;
 
@@ -74,8 +78,8 @@ export const Btn = styled.button`
     margin-left: 20px;
     border-radius: 20px;
     background-color: transparent;
-    color: #02C3BD;
-    border: 2px solid #02C3BD;
+    color: var(--colorSecondary);
+    border: 2px solid var(--colorSecondary);
     padding: 12px 15px;
     font-size: 1rem;
     align-self: flex-start;
@@ -84,7 +88,7 @@ export const Btn = styled.button`
     transition: 0.3s ease all;
     &:hover {
         transition: 0.3s ease all;
-        background-color: #02C3BD;
+        background-color: var(--colorSecondary);
         color: var(--ColorPrimary);
         filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.3));
     `;
@@ -93,6 +97,6 @@ export const ErrorMessage = styled.div`
   display: block;
   color: red;
   font-size: 13px;
-  margin: 3px 0 0 20px;
+  margin: 0 0 0 20px;
   text-align: start;
 `;

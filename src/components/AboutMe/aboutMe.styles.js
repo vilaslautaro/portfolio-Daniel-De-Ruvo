@@ -109,7 +109,4 @@ export const AboutMeBoxLinks = styled.div`
       filter: brightness(1.1);
     }
   }
-  & > a:first-child{
-    display: none;
-  }
 `;

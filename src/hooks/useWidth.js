@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 const useWidth = () => {
     const [width, setWidth] = useState(0);
-    
     useEffect(() => {
       const actualizarWidth = () => {
         const width = document.body.clientWidth;

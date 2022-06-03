@@ -48,3 +48,17 @@ export const ContactLinks = styled.div`
     }
   }
 `;
+
+export const Email = styled.p`
+  border-radius: 15px;
+  border: 1px solid var(--colorSecondary);
+  padding: 15px 30px;
+  color: var(--colorSecondary);
+  margin: 0;
+  transition: 0.3s ease all;
+  &:hover{
+    transition: 0.3s ease all;
+    background: var(--colorSecondary);
+    color: var(--colorPrimary);
+  }
+`
