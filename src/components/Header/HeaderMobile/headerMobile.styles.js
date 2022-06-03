@@ -9,7 +9,7 @@ export const Main = styled.header`
   border-bottom: 1px solid var(--colorSecondary);
   right: 0;
   background: var(--background);
-  z-index: 10;
+  z-index: 100;
   justify-content: space-between;
   align-items: center;
   height: 70px;

@@ -21,6 +21,7 @@ export const Header = () => {
       <img
         alt="Logo Daniel"
         aria-label="Logo Daniel"
+        title="Home"
         src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653404223/portfolio%20daniel/LOGO_DR_six97a.svg"
         width="120px"
         height="100px"

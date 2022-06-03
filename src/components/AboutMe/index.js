@@ -52,6 +52,7 @@ export const AboutMe = () => {
               href="https://github.com/deruvodaniel"
               target="_blank"
               rel="noreferrer"
+              title="Github"
             >
               <img
                 alt="GitHub"
@@ -64,6 +65,7 @@ export const AboutMe = () => {
               href="https://www.linkedin.com/in/deruvodaniel/"
               target="_blank"
               rel="noreferrer"
+              title="Linkedin"
             >
               <img
                 alt="Linkedin"
@@ -71,6 +73,13 @@ export const AboutMe = () => {
                 width="55px"
                 height="50px"
               />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/deruvodaniel/"
+              target="_blank"
+              rel="noreferrer"
+              title="Resume"
+            >CV
             </a>
           </AboutMeBoxLinks>
         </AboutMeBoxText>

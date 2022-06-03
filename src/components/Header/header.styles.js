@@ -7,11 +7,12 @@ export const Main = styled.header`
   justify-content: space-between;
   align-items: center;
   background: var(--background);
-  z-index: 10;
-  width: 90%;
-  border-bottom: 4px solid var(--colorSecondary);
+  z-index: 100;
+  width: 95%;
   max-width: 1400px;
+  border-bottom: 4px solid var(--colorSecondary);
   & > img {
+    padding-left: 20px;
     color: var(--colorPrimary);
     cursor: pointer;
     transition: 0.3s ease all;

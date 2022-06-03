@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export const SectionProjects = styled.section`
   margin: 100px 0;
   padding-top: 150px;
+  z-index: 40;
   color: var(--colorPrimary);
   & > h2 {
     font-size: 3.5rem;
@@ -15,8 +16,9 @@ export const SectionProjects = styled.section`
 export const ContainerProjects = styled.div`
 ${mediaQueries.desktop}{
   display: grid;
-  justify-content: start;
+  justify-content: center;
   row-gap: 150px;
+  z-index: 40;
   & > div:nth-child(2n+1){
     flex-flow: row-reverse wrap;
     & > div:first-child > div{
@@ -27,9 +29,10 @@ ${mediaQueries.desktop}{
 `;
 
 export const Container = styled(motion.div)`
-    display: flex;
-    flex-flow: column wrap;
-    margin: 0 0 50px;
+  display: flex;
+  flex-flow: column wrap;
+  z-index: 50;
+  margin: 0 0 50px;
   ${mediaQueries.desktop} {
     display: flex;
     width: 100%;
@@ -47,7 +50,8 @@ export const Container = styled(motion.div)`
 export const Img = styled.img`
   width: 90%;
   height: 100%;
-`
+  z-index: 45;
+`;
 
 export const ContainerBoxImg = styled.div`
   ${mediaQueries.desktop} {
@@ -81,54 +85,71 @@ export const ContainerImg = styled.div`
 export const ContainerTexts = styled.div`
   background: #3b2c35;
   width: 90%;
+  z-index: 55;
   height: 100%;
   padding: 15px 0;
   ${mediaQueries.desktop} {
-    padding: 20px 30px;
+    padding: 30px 50px;
     grid-area: text;
-    margin-top: 90px;
+    margin-top: 70px;
     display: flex;
     z-index: 2;
     flex-flow: column wrap;
     justify-content: space-between;
     width: 475px;
-    height: 275px;
+    height: 300px;
   }
 `;
 
 export const ProjectTitle = styled.h3`
   font-size: 2rem;
+  z-index: 55;
   font-weigth: 600;
   color: var(--colorPrimary);
-  margin: 0;
+  margin: 0 0 10px;
 `;
 
 export const ProjectSubtitle = styled.p`
   font-weigth: 600;
+  z-index: 55;
   color: var(--colorPrimary);
-  margin: 0;
+  margin: 0 0 5px;
   font-size: 1.5rem;
 `;
 
 export const ProjectDescription = styled.p`
   font-weigth: 600;
-  font-size: 1.2rem;
+  z-index: 55;
+  font-size: 1rem;
   color: var(--colorPrimary);
-  margin: 0;
+  margin: 0 0 20px;
 `;
 
-export const ProjectButton = styled.button`
+export const ContainerButtons = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+
+`
+
+export const ProjectButton = styled.a`
+  ${(props) => props.disabled === true && 
+  "display: none;"};
   font-weigth: 600;
   color: var(--colorPrimary);
-  margin: 20px 0 0;
+  text-transform: uppercase;
+  margin: 20px 15px 0 0;
   font-size: 1rem;
+  width: fit-content;
+  text-decoration: none;
   background: transparent;
+  z-index: 55;
   border-radius: 33px;
   border: 1px solid var(--colorPrimary);
   cursor: pointer;
   padding: 10px 40px;
   transition: 0.3s ease all;
   &:hover {
+    z-index: 55;
     color: var(--colorSecondary);
     transition: 0.3s ease all;
     border: 1px solid var(--colorSecondary);

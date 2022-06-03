@@ -4,6 +4,7 @@ export const SectionForm = styled.section`
   align-items: center;
   display: flex;
   flex-flow: column;
+  z-index: 11;
 `;
 
 export const Form = styled.form`

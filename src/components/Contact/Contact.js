@@ -25,7 +25,7 @@ export const Contact = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCopySuccess(false);
-    }, 2000);
+    }, 2500);
     return () => clearInterval(interval);
   }, [setCopySuccess]);
 
@@ -66,6 +66,7 @@ export const Contact = () => {
               href="https://github.com/deruvodaniel"
               target="_blank"
               rel="noreferrer"
+              title="Github"
             >
               <img
                 alt="GitHub"
@@ -77,6 +78,7 @@ export const Contact = () => {
             <a
               href="https://www.linkedin.com/in/deruvodaniel/"
               target="_blank"
+              title="Linkedin"
               rel="noreferrer"
             >
               <img

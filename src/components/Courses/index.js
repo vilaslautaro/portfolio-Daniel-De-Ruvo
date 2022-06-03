@@ -51,29 +51,31 @@ const courses = [
 
 export const Courses = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 500 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
-      viewport={{ once: true, amount: 0.3}}
-    >
-      <SectionCourses>
-        <CoursesTitle>Courses</CoursesTitle>
-        <ContainerCourses>
-          {courses.map(({ id, name, text, academy }) => {
-            return (
-              <ContainerCourse key={id}>
-                <ContainerCourseName>
-                  <div></div>
-                  <CourseName>{name}</CourseName>
-                </ContainerCourseName>
-                <CourseText>{text}</CourseText>
-                <CourseAcademy>{academy}</CourseAcademy>
-              </ContainerCourse>
-            );
-          })}
-        </ContainerCourses>
-      </SectionCourses>
-    </motion.div>
+    <>
+      <motion.div
+        initial={{ opacity: 0, x: 500 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <SectionCourses>
+          <CoursesTitle>Courses</CoursesTitle>
+          <ContainerCourses>
+            {courses.map(({ id, name, text, academy }) => {
+              return (
+                <ContainerCourse key={id}>
+                  <ContainerCourseName>
+                    <div></div>
+                    <CourseName>{name}</CourseName>
+                  </ContainerCourseName>
+                  <CourseText>{text}</CourseText>
+                  <CourseAcademy>{academy}</CourseAcademy>
+                </ContainerCourse>
+              );
+            })}
+          </ContainerCourses>
+        </SectionCourses>
+      </motion.div>
+    </>
   );
 };
