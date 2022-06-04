@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { mediaQueries } from "styles";
 
 const TYPES = {
-  "true": "var(--colorSecondary)",
-  "false": "red",
+  true: "var(--colorSecondary)",
+  false: "red",
 };
 
 export const Modal = styled.div`
@@ -18,6 +19,10 @@ export const ModalText = styled.p`
   color: var(--colorPrimary);
   font-weight: 500;
   margin: 0;
-  font-size: 20px;
-  padding: 15px 50px;
+  font-size: 15px;
+  padding: 15px 20px;
+  ${mediaQueries.tablet} {
+    font-size: 20px;
+    padding: 15px 50px;
+  }
 `;
