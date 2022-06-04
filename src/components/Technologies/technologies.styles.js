@@ -2,20 +2,21 @@ import styled from "styled-components";
 import { mediaQueries } from "styles";
 
 export const SectionTechnologies = styled.section`
-  margin: 50px 0 250px;
+  margin: 50px 0 0px;
   padding-top: 100px;
   z-index: 50;
   display: flex;
   flex-flow: column wrap;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   color: var(--colorPrimary);
   & > h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     z-index: 50;
     margin-bottom: 100px;
   }
   ${mediaQueries.desktop} {
+    margin: 50px 0 250px;
     align-items: center;
     & > h2 {
       font-size: 4rem;

@@ -1,6 +1,7 @@
 import { useRefs } from "context/refsContext";
 import { motion } from "framer-motion";
 import useWidth from "hooks/useWidth";
+import { useEffect } from "react";
 import {
   AboutMeBoxImg,
   AboutMeBoxLinks,
@@ -12,7 +13,9 @@ import {
 export const AboutMe = () => {
   const { refAboutMe } = useRefs();
   const {width} = useWidth()
-  const initial = width > 700 ? -500 : 0 
+  const initial = width > 700 ? -500 : 0
+
+  useEffect(()=>{console.log(width)},[width])
 
   return (
     <motion.div
@@ -47,8 +50,8 @@ export const AboutMe = () => {
               <img
                 alt="Twitter"
                 src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653408217/portfolio%20daniel/logot_wbqrk8.svg"
-                width="55px"
-                height="50px"
+                width={width > 767 ? "55px" : "40px"}
+                height={width > 767 ? "50px" : "35px"}
               />
             </a>
             <a
@@ -60,8 +63,8 @@ export const AboutMe = () => {
               <img
                 alt="GitHub"
                 src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653408217/portfolio%20daniel/logog_udsccl.svg"
-                width="55px"
-                height="50px"
+                width={width > 767 ? "55px" : "40px"}
+                height={width > 767 ? "50px" : "35px"}
               />
             </a>
             <a
@@ -73,8 +76,8 @@ export const AboutMe = () => {
               <img
                 alt="Linkedin"
                 src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653403777/portfolio%20daniel/logoin_brxiyb.svg"
-                width="55px"
-                height="50px"
+                width={width > 767 ? "55px" : "40px"}
+                height={width > 767 ? "50px" : "35px"}
               />
             </a>
             <a

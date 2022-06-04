@@ -13,16 +13,37 @@ export const Form = styled.form`
   display: grid;
   gap: 20px;
   grid-template-areas:
-    "name phone"
-    "email subject"
-    "message message"
-    "button button";
+      "name name"
+      "phone phone"
+      "email email"
+      "subject subject"
+      "message message"
+      "button button";
+  ${mediaQueries.tablet}{
+    grid-template-areas:
+      "name phone"
+      "email subject"
+      "message message"
+      "button button";
+  }
 `;
 
 export const BoxInput = styled.div`
   display: flex;
   flex-flow: column wrap;
   align-content: center;
+  &.input__name {
+    grid-area: name;
+  }
+  &.input__phone {
+    grid-area: phone;
+  }
+  &.input__email {
+    grid-area: email;
+  }
+  &.input__subject {
+    grid-area: subject;
+  }
   & > input {
     padding: 20px 10px;
     margin: 10px 20px;
@@ -46,18 +67,6 @@ export const BoxInput = styled.div`
       border: 1px solid red;
       outline: 1px solid red;
     }
-  }
-  &.input__name {
-    grid-area: name;
-  }
-  &.input__phone {
-    grid-area: phone;
-  }
-  &.input__email {
-    grid-area: email;
-  }
-  &.input__subject {
-    grid-area: subject;
   }
 `;
 

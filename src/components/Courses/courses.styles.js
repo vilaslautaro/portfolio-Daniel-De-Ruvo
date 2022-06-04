@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { mediaQueries } from "styles";
 
 export const SectionCourses = styled.section`
-  margin-top: 80px;
-  padding-top: 50px;
-  z-index: 50;
-  padding-left: 0;
-  ${mediaQueries.desktop}{
+z-index: 50;
+padding-top: 100px;
+padding-left: 0;
+${mediaQueries.desktop}{
+    margin-top: 80px;
+    padding-top: 50px;
     padding-left: 100px;
   }
 `;
@@ -30,7 +31,7 @@ export const ContainerCourses = styled.ul`
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   color: var(--colorPrimary);
   gap: 20px;
-  row-gap: 100px;
+  row-gap: 75px;
   list-style: none;
   ${mediaQueries.desktop}{
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -43,7 +44,7 @@ export const ContainerCourse = styled.li`
   display: flex;
   flex-flow: column wrap;
   align-items: flex-start;
-  width: 90%;
+  width: 99%;
   z-index: 50;
   ${mediaQueries.desktop}{
     width: 100%;
@@ -71,7 +72,7 @@ export const CourseName = styled.p`
   margin: 0 0 15px;
   z-index: 50;
   font-weight: 600;
-  width: 90%;
+  width: 100%;
   font-size: 1.3rem;
   ${mediaQueries.desktop}{
     font-size: 2.1rem;
@@ -83,7 +84,7 @@ export const CourseText = styled.p`
   margin: 0;
   z-index: 50;
   font-size: 1rem;
-  max-width: 65%;
+  max-width: 95%;
   ${mediaQueries.desktop}{
     max-width: 85%;
     font-size: 1.3rem;
@@ -94,6 +95,7 @@ export const CourseAcademy = styled.p`
   margin: 0;
   z-index: 50;  
   font-size: 1rem;
+  font-weight: 800;
   ${mediaQueries.desktop}{
     font-size: 1.3rem;
   }

@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { mediaQueries } from "styles";
 
 export const ContactTitle = styled.h2`
-  margin-top: 100px;
-  padding-top: 150px;
+  margin-top: 50px;
+  padding-top: 100px;
   color: var(--colorPrimary);
   z-index: 55;
   font-size: 2.5rem;
   ${mediaQueries.desktop}{
+    padding-top: 150px;
+    margin-top: 100px;
     font-size: 3.5rem;
     padding-left: 100px;
   }
@@ -28,7 +30,11 @@ export const SectionContact = styled.section`
 export const BoxContactInfo = styled.div`
   max-width: 500px;
   z-index: 50;
-  margin: 0 10px 100px;
+  margin: 0;
+  ${mediaQueries.desktop}{
+    margin: 0 10px 100px;
+
+  }
 `;
 
 export const ContactText = styled.h3`

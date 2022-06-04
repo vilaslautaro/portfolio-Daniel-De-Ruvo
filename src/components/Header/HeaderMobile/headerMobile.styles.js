@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "styles";
 
 export const Main = styled.header`
   display: flex;
@@ -13,9 +14,9 @@ export const Main = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  & > img {
+  & > img:first-child {
     color: var(--colorPrimary);
-    padding: 0 40px;
+    padding: 0 0 0 20px;
     cursor: pointer;
   }
   & > nav {
@@ -26,6 +27,12 @@ export const Main = styled.header`
     z-index: 20;
     background: var(--background);
   }
+`;
+
+export const LogoMenu = styled.img`
+  color: var(--colorPrimary);
+  padding: 0 20px 0 0;
+  cursor: pointer;
 `;
 
 export const ListLinks = styled.ul`
@@ -39,16 +46,22 @@ export const ListLinks = styled.ul`
 
 export const Links = styled.li`
   cursor: pointer;
-  font-size: 2rem;
-  margin-right: 20px;
+  font-size: 1.5rem;
   text-transform: uppercase;
-  margin-bottom: 30px;
   color: var(--colorSecondary);
+  padding: 3px 15px;
+  margin-bottom: 20px;
+  margin-right: 0px;
   border-radius: 20px;
-  padding: 3px 25px;
   transition: 0.3s ease all;
   &:hover {
     transition: 0.3s ease all;
     color: var(--colorSecondary);
+  }
+  ${mediaQueries.tablet} {
+    padding: 3px 25px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 2rem;
   }
 `;

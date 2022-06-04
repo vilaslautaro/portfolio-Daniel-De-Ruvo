@@ -11,10 +11,13 @@ import {
   Email,
 } from "./Contact.styles";
 import { motion } from "framer-motion";
+import useWidth from "hooks/useWidth";
 
 export const Contact = () => {
   const { refContact } = useRefs();
   const [copySuccess, setCopySuccess] = useState(false);
+  const { width } = useWidth();
+  const initial = width > 700 ? -500 : 0;
 
   const copyEmail = (e) => {
     e.target.focus();
@@ -31,64 +34,64 @@ export const Contact = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, x: initial }}
       whileInView={{ opacity: 1 }}
       transition={{ type: "spring", duration: 2 }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       <ContactTitle ref={refContact}>CONTACT</ContactTitle>
       <SectionContact>
         <BoxContactInfo>
           <ContactText>Do you have a project in mind? Let's talk!</ContactText>
           <ContactInfo>
-            <Email
-              onClick={copyEmail}
-            >
+            <Email onClick={copyEmail}>
               {copySuccess ? "Email copied" : "Copy email"}
             </Email>
             <p>+54 9 XX XXX XXX</p>
           </ContactInfo>
-          <ContactLinks>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="twitter"
-            >
-              <img
-                alt="Twitter"
-                src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653917728/portfolio%20daniel/logotblanco_pjudi4.svg"
-                width="45px"
-                height="40px"
-              />
-            </a>
-            <a
-              href="https://github.com/deruvodaniel"
-              target="_blank"
-              rel="noreferrer"
-              title="Github"
-            >
-              <img
-                alt="GitHub"
-                src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653917728/portfolio%20daniel/logogblanco_imqksz.svg"
-                width="45px"
-                height="40px"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/deruvodaniel/"
-              target="_blank"
-              title="Linkedin"
-              rel="noreferrer"
-            >
-              <img
-                alt="Linkedin"
-                src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653917728/portfolio%20daniel/logoinblanco_isyvzt.svg"
-                width="45px"
-                height="40px"
-              />
-            </a>
-          </ContactLinks>
+          {width > 1024 && (
+            <ContactLinks>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                className="twitter"
+              >
+                <img
+                  alt="Twitter"
+                  src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653917728/portfolio%20daniel/logotblanco_pjudi4.svg"
+                  width="45px"
+                  height="40px"
+                />
+              </a>
+              <a
+                href="https://github.com/deruvodaniel"
+                target="_blank"
+                rel="noreferrer"
+                title="Github"
+              >
+                <img
+                  alt="GitHub"
+                  src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653917728/portfolio%20daniel/logogblanco_imqksz.svg"
+                  width="45px"
+                  height="40px"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/deruvodaniel/"
+                target="_blank"
+                title="Linkedin"
+                rel="noreferrer"
+              >
+                <img
+                  alt="Linkedin"
+                  src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653917728/portfolio%20daniel/logoinblanco_isyvzt.svg"
+                  width="45px"
+                  height="40px"
+                />
+              </a>
+            </ContactLinks>
+          )}
         </BoxContactInfo>
         <MyForm />
       </SectionContact>

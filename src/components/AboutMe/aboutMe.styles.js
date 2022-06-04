@@ -2,16 +2,17 @@ import styled from "styled-components";
 import { mediaQueries } from "styles";
 
 export const SectionAboutMe = styled.section`
-  margin: 0 0 300px;
-  padding-top: 250px;
-  z-index: 50;
-  display: grid;
-  align-items: center;
+margin: 0 0 50px;
+padding-top: 250px;
+z-index: 50;
+display: grid;
+align-items: center;
   grid-template-columns: 1fr;
   justify-items: start;
   gap: 30px;
   padding-left: 0px;
   ${mediaQueries.desktop} {
+    margin: 0 0 300px;
     display: grid;
     padding-left: 100px;
     align-items: start;
@@ -23,7 +24,7 @@ export const SectionAboutMe = styled.section`
 export const AboutMeBoxImg = styled.div`
   background: #59c9a5;
   position: relative;
-  width: 60%;
+  width: 90%;
   margin-bottom: 40px;
   z-index: 50;
   margin-left: 0px;
@@ -34,8 +35,8 @@ export const AboutMeBoxImg = styled.div`
     width: 99%;
     height: 99%;
     z-index: 50;
-    left: 38px;
-    top: 38px;
+    left: 20px;
+    top: 20px;
     border: 6px solid #56e39f;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
@@ -43,8 +44,8 @@ export const AboutMeBoxImg = styled.div`
     cursor: pointer;
     position: absolute;
     width: 92%;
-    height: 170%;
-    left: 45px;
+    height: 172%;
+    left: 28px;
     z-index: 50;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
     bottom: 0px;
@@ -120,12 +121,13 @@ export const AboutMeBoxText = styled.div`
   justify-content: space-evenly;
   color: var(--colorPrimary);
   max-width: 550px;
-  width: 80%;
+  width: 95%;
   height: 500px;
   z-index: 50;
   & > p {
     font-size: 1.2rem;
-    margin: 0;
+    margin: 0 0 10px;
+    
     z-index: 50;
   }
   ${mediaQueries.desktop}{
@@ -144,9 +146,10 @@ export const AboutMeTitle = styled.h2`
   color: var(--colorSecondary);
   font-weigth: 600;
   z-index: 50;
-  margin: 0;
-  font-size: 3rem;
+  margin: 0 0 20px;
+  font-size: 2.3rem;
   ${mediaQueries.desktop}{
+    margin: 0;
     font-size: 4rem;
   }
 `;
@@ -169,10 +172,10 @@ export const AboutMeBoxLinks = styled.div`
       filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.8));
     }
     &:last-child {
-      width: 55px;
-      height: 50px;
+      width: 40px;
+      height: 35px;
       z-index: 50;
-      font-size: 3rem;
+      font-size: 2.2rem;
       font-weight: 800;
       color: var(--colorSecondary);
       transition: 0.3s ease all;
@@ -184,6 +187,42 @@ export const AboutMeBoxLinks = styled.div`
     & > img {
       filter: brightness(1.1);
       z-index: 50;
+    }
+  }
+  ${mediaQueries.tablet}{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    z-index: 50;
+    & > a {
+      text-decoration: none;
+      z-index: 50;
+      margin-right: 20px;
+      font-size: 1.5rem;
+      color: #fff;
+      transition: 0.3s ease all;
+      &:hover {
+        transition: 0.3s ease all;
+        filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.8));
+      }
+      &:last-child {
+        width: 55px;
+        height: 50px;
+        z-index: 50;
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--colorSecondary);
+        transition: 0.3s ease all;
+        &:hover {
+          transition: 0.3s ease all;
+          filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.8));
+        }
+      }
+      & > img {
+        filter: brightness(1.1);
+        z-index: 50;
+      }
     }
   }
 `;

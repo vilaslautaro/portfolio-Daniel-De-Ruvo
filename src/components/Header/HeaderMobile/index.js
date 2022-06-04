@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Links, ListLinks, Main } from "./headerMobile.styles";
+import { Links, ListLinks, LogoMenu, Main } from "./headerMobile.styles";
 
 export const HeaderMobile = ({ refs }) => {
   const { refAboutMe, refProjects, refContact, refHome, refTechnologies } = refs;
@@ -33,10 +33,11 @@ export const HeaderMobile = ({ refs }) => {
       <img
         src="https://res.cloudinary.com/dn7qsxzdf/image/upload/v1653404223/portfolio%20daniel/LOGO_DR_six97a.svg"
         width="65px"
+        onClick={() => scrollToSection(refHome)}
         height="45px"
         aria-label="logo Daniel"
       />
-      <img
+      <LogoMenu
         alt="menu"
         aria-label="menu"
         onClick={handleMenu}
