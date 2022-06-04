@@ -5,6 +5,7 @@ import {
   SectionTechnologies,
 } from "./technologies.styles";
 import { motion } from "framer-motion";
+import useWidth from "hooks/useWidth";
 
 const technologies = [
   {
@@ -51,10 +52,12 @@ const technologies = [
 
 export const Technologies = () => {
   const { refTechnologies } = useRefs();
+  const {width} = useWidth()
+  const initial = width > 700 ? -500 : 0 
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: -700 }}
+      initial={{ opacity: 0, x: initial }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
       viewport={{ once: true, amount: 0.3 }}

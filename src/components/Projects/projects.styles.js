@@ -8,13 +8,23 @@ export const SectionProjects = styled.section`
   z-index: 40;
   color: var(--colorPrimary);
   & > h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 80px;
+  }
+  ${mediaQueries.projects} {
+    & > h2 {
+      font-size: 3.5rem;
+    }
   }
 `;
 
 export const ContainerProjects = styled.div`
-${mediaQueries.desktop}{
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  row-gap: 150px;
+  z-index: 40;
+${mediaQueries.projects}{
   display: grid;
   justify-content: center;
   row-gap: 150px;
@@ -33,7 +43,7 @@ export const Container = styled(motion.div)`
   flex-flow: column wrap;
   z-index: 50;
   margin: 0 0 50px;
-  ${mediaQueries.desktop} {
+  ${mediaQueries.projects} {
     display: flex;
     width: 100%;
     flex-flow: row wrap;
@@ -51,10 +61,15 @@ export const Img = styled.img`
   width: 90%;
   height: 100%;
   z-index: 45;
+  ${mediaQueries.projects} {
+    width: 90%;
+    height: 100%;
+    z-index: 45;
+  }
 `;
 
 export const ContainerBoxImg = styled.div`
-  ${mediaQueries.desktop} {
+  ${mediaQueries.projects} {
     position: relative;
     width: 475px;
     height: 427px;
@@ -64,7 +79,7 @@ export const ContainerBoxImg = styled.div`
 `;
 
 export const ContainerImg = styled.div`
-  ${mediaQueries.desktop} {
+  ${mediaQueries.projects} {
     box-sizing: border-box;
     position: absolute;
     width: 475px;
@@ -88,7 +103,7 @@ export const ContainerTexts = styled.div`
   z-index: 55;
   height: 100%;
   padding: 15px 0;
-  ${mediaQueries.desktop} {
+  ${mediaQueries.projects} {
     padding: 30px 50px;
     grid-area: text;
     margin-top: 70px;
@@ -128,12 +143,10 @@ export const ProjectDescription = styled.p`
 export const ContainerButtons = styled.div`
   display: flex;
   flex-flow: row wrap;
-
-`
+`;
 
 export const ProjectButton = styled.a`
-  ${(props) => props.disabled === true && 
-  "display: none;"};
+  ${(props) => props.disabled === true && "display: none;"};
   font-weigth: 600;
   color: var(--colorPrimary);
   text-transform: uppercase;

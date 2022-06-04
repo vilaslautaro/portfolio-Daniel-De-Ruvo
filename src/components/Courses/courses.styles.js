@@ -1,36 +1,53 @@
 import styled from "styled-components";
+import { mediaQueries } from "styles";
 
 export const SectionCourses = styled.section`
   margin-top: 80px;
-  padding-left: 100px;
   padding-top: 50px;
   z-index: 50;
+  padding-left: 0;
+  ${mediaQueries.desktop}{
+    padding-left: 100px;
+  }
 `;
 
 export const CoursesTitle = styled.h2`
   color: var(--colorSecondary);
   font-weigth: 600;
   z-index: 60;
-  font-size: 4rem;
   margin: 0 0 75px;
+  font-size: 3rem;
+  ${mediaQueries.desktop}{
+    font-size: 4rem;
+  }
 `;
 
 export const ContainerCourses = styled.ul`
   margin-top: 50px;
+  padding: 0;
   display: grid;
   z-index: 50;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   color: var(--colorPrimary);
-  gap: 50px;
+  gap: 20px;
   row-gap: 100px;
   list-style: none;
+  ${mediaQueries.desktop}{
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 50px;
+    padding-left: 40px;
+  }
 `;
 
 export const ContainerCourse = styled.li`
   display: flex;
   flex-flow: column wrap;
   align-items: flex-start;
+  width: 90%;
   z-index: 50;
+  ${mediaQueries.desktop}{
+    width: 100%;
+  }
 `;
 
 export const ContainerCourseName = styled.div`
@@ -53,19 +70,31 @@ export const ContainerCourseName = styled.div`
 export const CourseName = styled.p`
   margin: 0 0 15px;
   z-index: 50;
-  font-size: 2.1rem;
   font-weight: 600;
+  width: 90%;
+  font-size: 1.3rem;
+  ${mediaQueries.desktop}{
+    font-size: 2.1rem;
+    width: 100%;
+  }
 `;
 
 export const CourseText = styled.p`
   margin: 0;
-  max-width: 85%;
   z-index: 50;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  max-width: 65%;
+  ${mediaQueries.desktop}{
+    max-width: 85%;
+    font-size: 1.3rem;
+  }
 `;
 
 export const CourseAcademy = styled.p`
   margin: 0;
-  z-index: 50;
-  font-size: 1.3rem;
+  z-index: 50;  
+  font-size: 1rem;
+  ${mediaQueries.desktop}{
+    font-size: 1.3rem;
+  }
 `;

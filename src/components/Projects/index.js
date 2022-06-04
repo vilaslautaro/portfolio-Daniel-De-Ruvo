@@ -92,7 +92,7 @@ export const Projects = () => {
                   transition={{ type: "spring", bounce: 0.7, duration: 1.5 }}
                   viewport={{ once: true, amount: 0.4 }}
                 >
-                  {width > 1024 ? (
+                  {width > 1138 ? (
                     <ContainerBoxImg>
                       <ContainerImg>
                         <img src={img} alt={title} />

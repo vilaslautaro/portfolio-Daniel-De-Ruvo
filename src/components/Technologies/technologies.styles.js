@@ -1,38 +1,57 @@
 import styled from "styled-components";
+import { mediaQueries } from "styles";
 
 export const SectionTechnologies = styled.section`
-    margin: 50px 0 250px;
-    padding-top: 100px;
+  margin: 50px 0 250px;
+  padding-top: 100px;
+  z-index: 50;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  justify-content: center;
+  color: var(--colorPrimary);
+  & > h2 {
+    font-size: 2rem;
     z-index: 50;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 100px;
+  }
+  ${mediaQueries.desktop} {
     align-items: center;
-    flex-flow: column wrap;
-    color: var(--colorPrimary); 
-    & > h2{
-        font-size: 4rem;
-        z-index: 50;
-        margin-bottom: 100px;
+    & > h2 {
+      font-size: 4rem;
     }
-`
+  }
+`;
 
 export const ContainerTechnologies = styled.div`
-    max-width: 1000px;
-    z-index: 50;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
-    justify-items: center;
-    justify-content: center;
+z-index: 50;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(75px, 200px));
+justify-items: center;
+justify-content: center;
+gap: 20px;
+max-width: 100%;
+${mediaQueries.tablet}{
+  max-width: 1000px;
+}
+${mediaQueries.desktop} {
     gap: 50px;
-`
+  }
+`;
 
 export const ImgTechnologies = styled.img`
-    cursor: pointer;
+  cursor: pointer;
+  z-index: 50;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 20px;
+  &:hover {
+    z-index: 50;
+    filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.7));
+  }
+  ${mediaQueries.desktop} {
     width: 100px;
     z-index: 50;
     height: 100px;
-    &:hover{
-        z-index: 50;
-        filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.7));
-    }
-`
+  }
+`;

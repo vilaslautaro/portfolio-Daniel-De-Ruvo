@@ -6,7 +6,7 @@ const TYPES = {
 };
 
 export const Modal = styled.div`
-  z-index: 11;
+  z-index: 91;
   position: fixed;
   top: 150px;
   right: 0;
