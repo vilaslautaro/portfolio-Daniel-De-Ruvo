@@ -20,11 +20,14 @@ const MyForm = () => {
   } = useForm();
 
   const onSubmit = ({ name, email, phone, subject, message }) => {
-    console.log(
-      `Name: ${name} Email: ${email} Phone: ${phone} Subject: ${subject} Message: ${message}`
-    );
-    setShowModal({ state: "true", text: "Mensaje enviado correctamente" });
-    reset();
+    try{
+      reset();
+      setShowModal({ state: "true", text: "Message sent successfully" });
+      console.log(name + email + phone + subject + message)
+    }
+    catch{
+      setShowModal({ state: "false", text: "An error occurred while sending the message" });
+    }
   };
 
   return (
@@ -39,19 +42,19 @@ const MyForm = () => {
               {...register("name", {
                 required: {
                   value: true,
-                  message: "El campo es requerido",
+                  message: "Field is required",
                 },
                 minLength: {
                   value: 3,
-                  message: "El nombre debe tener al menos 3 caracteres",
+                  message: "The name must be at least 3 characters long",
                 },
                 maxLength: {
                   value: 20,
-                  message: "Maximo de caracteres alcanzado",
+                  message: "Maximum characters reached",
                 },
                 pattern: {
                   value: /^[ a-zA-Z0]+$/,
-                  message: "Solo podes ingresar letras",
+                  message: "You can only enter letters",
                 },
               })}
             />
@@ -65,15 +68,15 @@ const MyForm = () => {
               {...register("phone", {
                 maxLength: {
                   value: 20,
-                  message: "El maximo de caracteres es 20",
+                  message: "The maximum number of characters is 20",
                 },
                 minLength: {
                   value: 10,
-                  message: "El minimo de caracteres es 10",
+                  message: "The minimum number of characters is 10",
                 },
                 pattern: {
                   value: /^\d+$/,
-                  message: "Solo podes ingresar numeros",
+                  message: "You can only enter numbers",
                 },
               })}
             />
@@ -87,19 +90,19 @@ const MyForm = () => {
               {...register("email", {
                 required: {
                   value: true,
-                  message: "El campo es requerido",
+                  message: "Field is required",
                 },
                 minLength: {
                   value: 10,
-                  message: "El minimo de caracteres es 10",
+                  message: "The minimum number of characters is 10",
                 },
                 maxLength: {
                   value: 40,
-                  message: "El maximo de caracteres es 40",
+                  message: "The maximum number of characters is 40",
                 },
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: "Debe introducir un email valido",
+                  message: "You must enter a valid email address",
                 },
               })}
             />
@@ -113,19 +116,19 @@ const MyForm = () => {
               {...register("subject", {
                 required: {
                   value: true,
-                  message: "El campo es requerido",
+                  message: "Field is required",
                 },
                 minLength: {
                   value: 6,
-                  message: "El asunto debe tener al menos 6 caracteres",
+                  message: "The subject line must be at least 6 characters long",
                 },
                 maxLength: {
                   value: 30,
-                  message: "Maximo de caracteres alcanzado",
+                  message: "Maximum characters reached",
                 },
                 pattern: {
                   value: /^[ a-zA-Z0-9]+$/,
-                  message: "Solo podes ingresar letras y numeros",
+                  message: "You can only enter letters and numbers",
                 },
               })}
             />
@@ -138,15 +141,15 @@ const MyForm = () => {
               {...register("message", {
                 required: {
                   value: true,
-                  message: "El campo es requerido",
+                  message: "Field is required",
                 },
                 minLength: {
                   value: 10,
-                  message: "El mensaje debe tener al menos 10 caracteres",
+                  message: "The message must be at least 10 characters long",
                 },
                 maxLength: {
                   value: 500,
-                  message: "Maximo de caracteres alcanzado",
+                  message: "Maximum characters reached",
                 },
               })}
             />

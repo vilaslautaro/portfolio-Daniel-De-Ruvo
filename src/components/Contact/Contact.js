@@ -8,29 +8,37 @@ import {
   ContactInfo,
   ContactLinks,
   BoxContactInfo,
-  Email,
+  ButtonCopy,
 } from "./Contact.styles";
 import { motion } from "framer-motion";
 import useWidth from "hooks/useWidth";
 
 export const Contact = () => {
   const { refContact } = useRefs();
-  const [copySuccess, setCopySuccess] = useState(false);
+  const [copyEmailSuccess, setCopyEmailSuccess] = useState(false);
+  const [copyPhoneSuccess, setCopyPhoneSuccess] = useState(false);
   const { width } = useWidth();
   const initial = width > 700 ? -500 : 0;
 
   const copyEmail = (e) => {
     e.target.focus();
     navigator.clipboard.writeText("danielderuvo@gmail.com");
-    setCopySuccess("Email copied!");
+    setCopyEmailSuccess("Email copied!");
+  };
+
+  const copyPhone = (e) => {
+    e.target.focus();
+    navigator.clipboard.writeText("+549xxxxxxx");
+    setCopyPhoneSuccess("Phone Copied!");
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCopySuccess(false);
+      setCopyEmailSuccess(false);
+      setCopyPhoneSuccess(false);
     }, 2500);
     return () => clearInterval(interval);
-  }, [setCopySuccess]);
+  }, [setCopyEmailSuccess, setCopyPhoneSuccess]);
 
   return (
     <motion.div
@@ -44,10 +52,12 @@ export const Contact = () => {
         <BoxContactInfo>
           <ContactText>Do you have a project in mind? Let's talk!</ContactText>
           <ContactInfo>
-            <Email onClick={copyEmail}>
-              {copySuccess ? "Email copied" : "Copy email"}
-            </Email>
-            <p>+54 9 XX XXX XXX</p>
+            <ButtonCopy onClick={copyEmail}>
+              {copyEmailSuccess ? "Email copied" : "Copy email"}
+            </ButtonCopy>
+            <ButtonCopy onClick={copyPhone}>
+              {copyPhoneSuccess ? "Phone copied" : "Copy phone"}
+            </ButtonCopy>
           </ContactInfo>
           {width > 1024 && (
             <ContactLinks>

@@ -16,9 +16,10 @@ export const CoursesTitle = styled.h2`
   color: var(--colorSecondary);
   font-weigth: 600;
   z-index: 60;
-  margin: 0 0 75px;
+  margin: 0 0 35px;
   font-size: 3rem;
   ${mediaQueries.desktop}{
+    margin: 0 0 75px;
     font-size: 4rem;
   }
 `;

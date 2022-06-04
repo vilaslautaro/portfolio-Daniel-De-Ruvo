@@ -26,7 +26,7 @@ export const AboutMeBoxImg = styled.div`
   background: #59c9a5;
   position: relative;
   width: 230px;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
   z-index: 50;
   margin-left: 0px;
   height: 200px;
@@ -128,7 +128,7 @@ export const AboutMeBoxText = styled.div`
   z-index: 50;
   & > p {
     font-size: 1.2rem;
-    margin: 0 0 15px;
+    margin: 0 0 25px;
     z-index: 50;
   }
   ${mediaQueries.desktop}{
@@ -148,8 +148,8 @@ export const AboutMeTitle = styled.h2`
   color: var(--colorSecondary);
   font-weigth: 600;
   z-index: 50;
-  margin: 0 0 10px;
-  font-size: 2.3rem;
+  margin: 0 0 20px;
+  font-size: 2.5rem;
   ${mediaQueries.tablet}{
     margin: 0 0 20px;
     font-size: 3.2rem;

@@ -19,11 +19,16 @@ export const FooterStyle = styled.footer`
   & > h3 {
     z-index: 50;
     color: #155f60;
+    font-size: 1rem;
+    text-align: center;
   }
   ${mediaQueries.desktop} {
     margin-top: 450px;
     & > img {
       margin-bottom: 50px;
+    }
+    & > h3 {
+      font-size: 1.3rem;
     }
   }
 `;

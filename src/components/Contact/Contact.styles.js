@@ -7,7 +7,7 @@ export const ContactTitle = styled.h2`
   color: var(--colorPrimary);
   z-index: 55;
   font-size: 2.5rem;
-  ${mediaQueries.desktop}{
+  ${mediaQueries.desktop} {
     padding-top: 150px;
     margin-top: 100px;
     font-size: 3.5rem;
@@ -21,8 +21,8 @@ export const SectionContact = styled.section`
   color: var(--colorPrimary);
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around; 
-  ${mediaQueries.desktop}{
+  justify-content: space-around;
+  ${mediaQueries.desktop} {
     padding-left: 100px;
   }
 `;
@@ -31,16 +31,18 @@ export const BoxContactInfo = styled.div`
   max-width: 500px;
   z-index: 50;
   margin: 0;
-  ${mediaQueries.desktop}{
+  ${mediaQueries.desktop} {
     margin: 0 10px 100px;
-
   }
 `;
 
 export const ContactText = styled.h3`
   color: var(--colorSecondary);
-  font-size: 2rem;
+  font-size: 1.5rem;
   z-index: 50;
+  ${mediaQueries.tablet} {
+    font-size: 2rem;
+  }
 `;
 
 export const ContactInfo = styled.div`
@@ -51,13 +53,16 @@ export const ContactInfo = styled.div`
   align-items: center;
   margin: 80px 0px;
   gap: 20px;
-  & > p {
+  & > a {
     text-align: center;
     cursor: pointer;
     z-index: 50;
-    margin: 0;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--colorPrimary);
+    margin: 10px 0;
   }
-  ${mediaQueries.desktop}{
+  ${mediaQueries.desktop} {
     justify-content: space-between;
   }
 `;
@@ -80,20 +85,22 @@ export const ContactLinks = styled.div`
   }
 `;
 
-export const Email = styled.p`
+export const ButtonCopy = styled.p`
   border-radius: 15px;
   z-index: 50;
+  text-align: center;
+  cursor: pointer;
   border: 1px solid var(--colorSecondary);
   padding: 15px 30px;
   color: var(--colorSecondary);
   transition: 0.3s ease all;
-  &:hover{
+  &:hover {
     transition: 0.3s ease all;
     z-index: 50;
     background: var(--colorSecondary);
     color: var(--colorPrimary);
   }
-  ${mediaQueries.desktop}{
+  ${mediaQueries.desktop} {
     margin: 0;
   }
-`
+`;
