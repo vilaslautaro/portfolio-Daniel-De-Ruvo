@@ -51,12 +51,9 @@ export const BoxInput = styled.div`
     width: 90%;
     color: var(--colorPrimary);
     font-size: 1rem;
-    border: 1px solid #3a5856;
-    outline: 1px solid #3a5856;
+    border: 2px solid #3a5856;
+    outline: none;
     background-color: #3a5856;
-    ${mediaQueries.desktop} {
-      max-width: 250px;
-    }
     ::placeholder {
       color: var(--colorPrimary);
     }
@@ -64,8 +61,11 @@ export const BoxInput = styled.div`
       background-color: #3a5856;
     }
     &.input__error {
-      border: 1px solid red;
-      outline: 1px solid red;
+      border: 2px solid red;
+      outline: none;
+    }
+    ${mediaQueries.desktop} {
+      max-width: 250px;
     }
   }
 `;

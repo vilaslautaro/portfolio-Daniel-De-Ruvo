@@ -1,7 +1,6 @@
 import { useRefs } from "context/refsContext";
 import { motion } from "framer-motion";
 import useWidth from "hooks/useWidth";
-import { useEffect } from "react";
 import {
   AboutMeBoxImg,
   AboutMeBoxLinks,
@@ -12,10 +11,8 @@ import {
 
 export const AboutMe = () => {
   const { refAboutMe } = useRefs();
-  const {width} = useWidth()
-  const initial = width > 700 ? -500 : 0
-
-  useEffect(()=>{console.log(width)},[width])
+  const { width } = useWidth();
+  const initial = width > 700 ? -500 : 0;
 
   return (
     <motion.div
@@ -85,7 +82,8 @@ export const AboutMe = () => {
               target="_blank"
               rel="noreferrer"
               title="Resume"
-            >CV
+            >
+              CV
             </a>
           </AboutMeBoxLinks>
         </AboutMeBoxText>

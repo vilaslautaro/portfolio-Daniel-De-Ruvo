@@ -8,24 +8,25 @@ z-index: 50;
 display: grid;
 align-items: center;
   grid-template-columns: 1fr;
-  justify-items: start;
   gap: 30px;
   padding-left: 0px;
-  ${mediaQueries.desktop} {
-    margin: 0 0 300px;
-    display: grid;
-    padding-left: 100px;
-    align-items: start;
+  ${mediaQueries.tablet} {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 90px;
+    padding-left: 100px;
+  }
+  ${mediaQueries.desktop}{
+    margin: 0 0 300px;
+    align-items: start;
+    justify-items: start;
   }
 `;
 
 export const AboutMeBoxImg = styled.div`
   background: #59c9a5;
   position: relative;
-  width: 90%;
-  margin-bottom: 40px;
+  width: 230px;
+  margin-bottom: 15px;
   z-index: 50;
   margin-left: 0px;
   height: 200px;
@@ -118,16 +119,16 @@ export const AboutMeBoxImg = styled.div`
 export const AboutMeBoxText = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: space-evenly;
   color: var(--colorPrimary);
+  align-content: space-evenly;
   max-width: 550px;
   width: 95%;
-  height: 500px;
+  row-gap: 0px;
+  height: 400px;
   z-index: 50;
   & > p {
     font-size: 1.2rem;
-    margin: 0 0 10px;
-    
+    margin: 0 0 15px;
     z-index: 50;
   }
   ${mediaQueries.desktop}{
@@ -135,6 +136,7 @@ export const AboutMeBoxText = styled.div`
     flex-flow: column wrap;
     justify-content: space-between;
     width: 100%;
+    height: 500px;
     & > p {
       font-size: 1.5rem;
       margin: 0;
@@ -146,8 +148,12 @@ export const AboutMeTitle = styled.h2`
   color: var(--colorSecondary);
   font-weigth: 600;
   z-index: 50;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   font-size: 2.3rem;
+  ${mediaQueries.tablet}{
+    margin: 0 0 20px;
+    font-size: 3.2rem;
+  }
   ${mediaQueries.desktop}{
     margin: 0;
     font-size: 4rem;

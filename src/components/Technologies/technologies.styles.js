@@ -43,16 +43,18 @@ ${mediaQueries.desktop} {
 export const ImgTechnologies = styled.img`
   cursor: pointer;
   z-index: 50;
-  width: 75px;
-  height: 75px;
   margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
   &:hover {
-    z-index: 50;
     filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.7));
+  }
+  ${mediaQueries.tablet}{
+    width: 75px;
+    height: 75px;
   }
   ${mediaQueries.desktop} {
     width: 100px;
-    z-index: 50;
     height: 100px;
   }
 `;

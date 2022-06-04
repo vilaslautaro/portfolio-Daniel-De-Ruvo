@@ -60,7 +60,7 @@ export const Container = styled(motion.div)`
 `;
 
 export const Img = styled.img`
-  width: 90%;
+  width: 100%;
   height: 100%;
   z-index: 45;
   border-radius: 9px 9px 0 0;
@@ -97,16 +97,22 @@ export const ContainerImg = styled.div`
 
 export const ContainerTexts = styled.div`
   background: #3b2c35;
-  width: 90%;
+  width: 100%;
   z-index: 55;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
   border-radius: 0 0 9px 9px;
   height: 100%;
   padding: 15px 0;
   ${mediaQueries.projects} {
     border-radius: 0;
-    padding: 30px 50px;
+    padding: 20px 50px;
     grid-area: text;
     margin-top: 70px;
+    align-items: start;
     display: flex;
     z-index: 2;
     flex-flow: column wrap;
@@ -124,7 +130,7 @@ export const ProjectTitle = styled.h3`
   margin: 0 0 5px;
   font-size: 1.5rem;
   ${mediaQueries.tablet} {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -149,7 +155,7 @@ export const ProjectDescription = styled.p`
   color: var(--colorPrimary);
   margin: 0 0 20px;
   ${mediaQueries.tablet} {
-    display: inline-block;
+    display: block;
   }
 `;
 
@@ -164,7 +170,7 @@ export const ProjectButton = styled.a`
   font-weigth: 600;
   color: var(--colorPrimary);
   text-transform: uppercase;
-  margin: 20px 15px 0 0;
+  margin: 20px 20px 0;
   font-size: 0.7rem;
   text-align: center; 
   width: 100%;
@@ -183,6 +189,7 @@ export const ProjectButton = styled.a`
     border: 1px solid var(--colorSecondary);
   }
   ${mediaQueries.tablet}{
+    margin: 20px 15px 0 0;
     width: fit-content;
   }
   ${mediaQueries.desktop}{
