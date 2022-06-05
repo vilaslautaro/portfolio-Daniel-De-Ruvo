@@ -1,4 +1,3 @@
-import useHeight from "hooks/useHeight";
 import { useRef, useState } from "react";
 import { Links, ListLinks, LogoMenu, Main } from "./headerMobile.styles";
 

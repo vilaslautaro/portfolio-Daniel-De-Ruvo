@@ -9,6 +9,7 @@ export const Main = styled(motion.header)`
   align-items: center;
   z-index: 100;
   width: 95%;
+  max-width: 1400px;
   border-bottom: 4px solid var(--colorSecondary);
   &.withBackground {
     background: var(--background);
