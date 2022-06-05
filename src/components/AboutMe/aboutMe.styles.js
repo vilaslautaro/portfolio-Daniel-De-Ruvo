@@ -11,8 +11,8 @@ align-items: center;
   gap: 30px;
   padding-left: 0px;
   ${mediaQueries.tablet} {
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 90px;
+    grid-template-columns: repeat(auto-fill, minmax(475px, 1fr));
+    gap: 30px;
     padding-left: 100px;
   }
   ${mediaQueries.desktop}{
@@ -44,8 +44,8 @@ export const AboutMeBoxImg = styled.div`
   & > img {
     cursor: pointer;
     position: absolute;
-    width: 92%;
-    height: 172%;
+    width: 93%;
+    height: 140%;
     left: 28px;
     z-index: 50;
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
@@ -57,60 +57,35 @@ export const AboutMeBoxImg = styled.div`
     }
   }
   ${mediaQueries.tablet} {
-    background: #59c9a5;
-    position: relative;
     width: 330px;
-    z-index: 50;
-    margin-left: 70px;
-    height: 277px;
+    height: 297px;
     & > div {
-      box-sizing: border-box;
-      position: absolute;
       width: 325px;
-      height: 277px;
-      z-index: 50;
+      height: 297px;
       left: 38px;
       top: 38px;
-      border: 6px solid #56e39f;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
     & > img {
-      cursor: pointer;
-      position: absolute;
-      width: 285px;
-      height: 377px;
+      width: 312px;
+      height: 397px;
       left: 45px;
-      z-index: 50;
-      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
       bottom: 0px;
-      transition: 0.3s ease all;
-      &:hover {
-        transition: 0.3s ease all;
-        filter: drop-shadow(0 2px 5px rgba(86, 227, 159, 0.8));
-      }
     }
   }
   ${mediaQueries.desktop} {
-    background: #59c9a5;
-    position: relative;
-    width: 430px;
-    height: 377px;
+    width: 400px;
+    height: 357px;
+    margin: 75px 0 0 50px;
     & > div {
-      box-sizing: border-box;
-      position: absolute;
-      width: 425px;
-      height: 377px;
+      width: 395px;
+      height: 357px;
       left: 38px;
       top: 38px;
-      border: 6px solid #56e39f;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
     & > img {
-      position: absolute;
-      width: 412px;
-      height: 558px;
+      width: 382px;
+      height: 488px;
       left: 45px;
-      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.8));
       bottom: 0px;
     }
   }
@@ -134,7 +109,6 @@ export const AboutMeBoxText = styled.div`
   ${mediaQueries.desktop}{
     display:; flex
     flex-flow: column wrap;
-    justify-content: space-between;
     width: 100%;
     height: 500px;
     & > p {

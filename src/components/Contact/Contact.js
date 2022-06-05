@@ -22,13 +22,13 @@ export const Contact = () => {
 
   const copyEmail = (e) => {
     e.target.focus();
-    navigator.clipboard.writeText("danielderuvo@gmail.com");
+    navigator.clipboard.writeText("deruvodaniel@gmail.com");
     setCopyEmailSuccess("Email copied!");
   };
 
   const copyPhone = (e) => {
     e.target.focus();
-    navigator.clipboard.writeText("+549xxxxxxx");
+    navigator.clipboard.writeText("+541165911732");
     setCopyPhoneSuccess("Phone Copied!");
   };
 
@@ -36,7 +36,7 @@ export const Contact = () => {
     const interval = setInterval(() => {
       setCopyEmailSuccess(false);
       setCopyPhoneSuccess(false);
-    }, 2500);
+    }, 3000);
     return () => clearInterval(interval);
   }, [setCopyEmailSuccess, setCopyPhoneSuccess]);
 

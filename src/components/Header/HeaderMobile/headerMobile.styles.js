@@ -7,7 +7,7 @@ export const Main = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom: 1px solid var(--colorSecondary);
+  border-bottom: 3px solid var(--colorSecondary);
   right: 0;
   background: var(--background);
   z-index: 100;

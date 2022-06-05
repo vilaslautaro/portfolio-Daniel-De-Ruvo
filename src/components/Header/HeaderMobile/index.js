@@ -1,16 +1,16 @@
+import useHeight from "hooks/useHeight";
 import { useRef, useState } from "react";
 import { Links, ListLinks, LogoMenu, Main } from "./headerMobile.styles";
+
+const iconMenu = "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1652379488/portfolio%20daniel/menu_uw4rjt.png";
+const iconClose = "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1652379624/portfolio%20daniel/cerrar_zhp6o1.png";
 
 export const HeaderMobile = ({ refs }) => {
   const { refAboutMe, refProjects, refContact, refHome, refTechnologies } = refs;
   const [menuOpen, setMenuOpen] = useState(false);
   const menu = useRef(null);
-  const iconMenu =
-    "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1652379488/portfolio%20daniel/menu_uw4rjt.png";
-  const iconClose =
-    "https://res.cloudinary.com/dn7qsxzdf/image/upload/v1652379624/portfolio%20daniel/cerrar_zhp6o1.png";
 
-  function handleMenu() {
+  const handleMenu = () => {
     if (menu.current.classList.contains("open") === false) {
       menu.current.classList.add("open");
       setMenuOpen(true);
@@ -18,7 +18,7 @@ export const HeaderMobile = ({ refs }) => {
       menu.current.classList.remove("open");
       setMenuOpen(false);
     }
-  }
+  };
 
   const scrollToSection = (section) => {
     if (section !== null && section.current !== null) {
@@ -50,7 +50,9 @@ export const HeaderMobile = ({ refs }) => {
           <ListLinks>
             <Links onClick={() => scrollToSection(refHome)}>Home</Links>
             <Links onClick={() => scrollToSection(refAboutMe)}>About Me</Links>
-            <Links onClick={() => scrollToSection(refTechnologies)}>Technologies</Links>
+            <Links onClick={() => scrollToSection(refTechnologies)}>
+              Technologies
+            </Links>
             <Links onClick={() => scrollToSection(refProjects)}>Projects</Links>
             <Links onClick={() => scrollToSection(refContact)}>Contact</Links>
           </ListLinks>

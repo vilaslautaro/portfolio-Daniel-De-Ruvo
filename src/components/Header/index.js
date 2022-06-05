@@ -1,23 +1,27 @@
 import { useRefs } from "context/refsContext";
+import useHeight from "hooks/useHeight";
 import useWidth from "hooks/useWidth";
 import { ListLinks, Main, Links } from "./header.styles";
 import { HeaderMobile } from "./HeaderMobile";
 
 export const Header = () => {
-  const {refs} = useRefs()
-  const { refAboutMe, refProjects, refContact, refHome, refTechnologies } = refs;
+  const { refs } = useRefs();
+  const { refAboutMe, refProjects, refContact, refHome, refTechnologies } =
+    refs;
   const { width } = useWidth();
+  const { height } = useHeight();
 
   const scrollToSection = (section) => {
     if (section !== null && section.current !== null) {
       section.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-  
+
+
   if (width < 1024) return <HeaderMobile refs={refs} />;
 
   return (
-    <Main>
+    <Main className={height > 70 && "withBackground"}>
       <img
         alt="Logo Daniel"
         aria-label="Logo Daniel"
