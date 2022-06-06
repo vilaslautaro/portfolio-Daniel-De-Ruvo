@@ -20,6 +20,7 @@ const dataEmailer = {
 };
 
 const MyForm = () => {
+  const {serviceId, templateId, publicKey} = dataEmailer
   const { showModal, ModalMessage, setShowModal } = ModalMessageForm();
   const [showLoading, setShowLoading] = useState(false);
   const form = useRef(null);
@@ -29,7 +30,7 @@ const MyForm = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const {serviceId, templateId, publicKey} = dataEmailer
+  
   const onSubmit = () => {
     setShowLoading(true);
     emailjs

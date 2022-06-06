@@ -20,3 +20,10 @@ export const ModalContent = styled.div`
   flex-flow: column wrap;
   align-items: center; 
 `;
+
+export const ContainerLoading = styled.div`
+  display: flex;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
+`;

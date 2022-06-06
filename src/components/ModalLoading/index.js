@@ -1,15 +1,16 @@
-import { Spinner } from "components/Spinner";
+import { DotSpinner } from "@uiball/loaders";
 import ReactDOM from "react-dom";
-import { Modal, ModalContent } from "./modalLoading.styles";
-
+import { ContainerLoading, Modal, ModalContent } from "./modalLoading.styles";
 
 export default function ModalLoading() {
   return ReactDOM.createPortal(
-      <Modal>
-        <ModalContent>
-          <Spinner />
-        </ModalContent>
-      </Modal>,
+    <Modal>
+      <ModalContent>
+        <ContainerLoading>
+          <DotSpinner size={80} speed={0.9} color={"#56E39F"} />
+        </ContainerLoading>
+      </ModalContent>
+    </Modal>,
     document.getElementById("modal-loading")
   );
 }
