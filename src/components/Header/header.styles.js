@@ -10,8 +10,10 @@ export const Main = styled(motion.header)`
   z-index: 100;
   width: 95%;
   max-width: 1400px;
-  border-bottom: 4px solid var(--colorSecondary);
+  transition: 0.5s ease all;
   &.withBackground {
+    transition: 0.5s ease all;
+    border-bottom: 4px solid var(--colorSecondary);
     background: var(--background);
   }
   & > img {

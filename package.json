@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "@uiball/loaders": "^1.2.6",
     "framer-motion": "^6.3.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
