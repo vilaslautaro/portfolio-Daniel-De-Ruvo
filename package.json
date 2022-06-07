@@ -10,8 +10,7 @@
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.31.3",
     "react-scripts": "^5.0.1",
-    "styled-components": "^5.3.5",
-    "vercel": "^25.0.0"
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",

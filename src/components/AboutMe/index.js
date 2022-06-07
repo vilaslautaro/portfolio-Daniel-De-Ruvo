@@ -78,7 +78,7 @@ export const AboutMe = () => {
               />
             </a>
             <a
-              href="https://www.linkedin.com/in/deruvodaniel/"
+              href="https://drive.google.com/uc?id=1lgCyp5BOuSfQFZ3BB9z4hzxt0NApVRdb&export=download"
               target="_blank"
               rel="noreferrer"
               title="Resume"
