@@ -34,5 +34,5 @@ export const courses = [
     name: "Git Started with GitHub",
     text: "Save project changes into source control using Git, Create repositories on GitHub. Pull request, and branchs use. (Jason Tylor)",
     academy: "Udemy",
-  },
+  }
 ];
